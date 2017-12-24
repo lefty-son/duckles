@@ -4,6 +4,11 @@
 /[Bb]uild/
 /[Bb]uilds/
 /Assets/AssetStoreTools*
+/Assets/Plugin
+/Assets/Plugins
+/Assets/Download
+/Assets/Downloads
+/xCode/
 
 # Visual Studio 2015 cache directory
 /.vs/
