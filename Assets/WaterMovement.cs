@@ -24,5 +24,6 @@ public class WaterMovement : MonoBehaviour {
         if(other.CompareTag("Sector")){
             LevelGenerator.instance.CheckLevel();
         }
+        //
     }
 }
