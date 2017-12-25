@@ -10,6 +10,8 @@
 /Assets/Downloads
 /xCode/
 
+user.keystore
+
 # Visual Studio 2015 cache directory
 /.vs/
 
@@ -38,3 +40,5 @@ sysinfo.txt
 *.apk
 *.unitypackage
 *.keystore
+
+
