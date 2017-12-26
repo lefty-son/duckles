@@ -48,7 +48,6 @@ public class TouchEvent : MonoBehaviour {
                 HandleTouch(10, Camera.main.ScreenToWorldPoint(mousePosition), TouchPhase.Ended);
             }
         }
-        Debug.Log(rigid.angularVelocity);
         lastFrameVelocity = rigid.velocity;
     }
 
@@ -63,9 +62,6 @@ public class TouchEvent : MonoBehaviour {
     {
         var speed = lastFrameVelocity.magnitude;
         var direction = Vector3.Reflect(lastFrameVelocity.normalized, collisionNormal);
-
-        Debug.Log("speeed: " + speed);
-        Debug.Log("minspeed: " + minVelocity);
         rigid.velocity = direction * Mathf.Max((speed * 0.8f), minVelocity);
     }
 

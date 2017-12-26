@@ -218,8 +218,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c2674339726c4528ae296def3d1b436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _depth: 0
   levelNumber: 0
   levelPoolEven: []
+  levelPoolOdd: []
+  noWallSectorEven: []
+  noWallSectorOdd: []
+  wallSectorEven: []
+  wallSectorOdd: []
   sectors:
   - {fileID: 1085404102865962, guid: b902bf50894ff434485d4c663e77e415, type: 2}
   - {fileID: 1365870037255750, guid: dc116be35eecb4020ac274a8522b84bd, type: 2}
@@ -252,6 +258,23 @@ Transform:
   m_PrefabParentObject: {fileID: 4073324347255524, guid: 0de2c20ffb7be4434b41031f49444e15,
     type: 2}
   m_PrefabInternal: {fileID: 843351184}
+--- !u!1 &500309349 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1565890816522586, guid: 0de2c20ffb7be4434b41031f49444e15,
+    type: 2}
+  m_PrefabInternal: {fileID: 843351184}
+--- !u!114 &500309356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 500309349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d6c438750d5c494d9bf9f2260ea2e41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
 --- !u!1 &738747581
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +370,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4073324347255524, guid: 0de2c20ffb7be4434b41031f49444e15, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.5
+      value: -2.21
       objectReference: {fileID: 0}
     - target: {fileID: 4073324347255524, guid: 0de2c20ffb7be4434b41031f49444e15, type: 2}
       propertyPath: m_LocalPosition.y
@@ -396,7 +419,7 @@ GameObject:
   m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -477,7 +500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33587403eacf34e2699857b2db584a26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterSpeed: 1
+  waterSpeed: 0.5
 --- !u!54 &999812080
 Rigidbody:
   m_ObjectHideFlags: 0
