@@ -3,18 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class NoWallSector : MonoBehaviour {
-    public PlatSizer upper, middle, lower;
+    private bool isLefty;
+    public PlatSizer upperPlat, middlePlat, lowerPlat;
+    public Star upperStar, lowerStar;
+    public SpikeCollider upperSpike, lowerSpike;
+    public Roof roof;
+    public Key key;
+
     public void OnNotify(){
         var r = Random.Range(0, 2);
         if(r == 0){
-            upper.OnNotify(PlatSizer.SIDE.LEFT);
-            middle.OnNotify(PlatSizer.SIDE.RIGHT);
-            lower.OnNotify(PlatSizer.SIDE.LEFT);
+            isLefty = true;
+            upperPlat.OnNotify(PlatSizer.SIDE.LEFT);
+            middlePlat.OnNotify(PlatSizer.SIDE.RIGHT);
+            lowerPlat.OnNotify(PlatSizer.SIDE.LEFT);
         }
         else{
-            upper.OnNotify(PlatSizer.SIDE.RIGHT);
-            middle.OnNotify(PlatSizer.SIDE.LEFT);
-            lower.OnNotify(PlatSizer.SIDE.RIGHT);
+            isLefty = false;
+            upperPlat.OnNotify(PlatSizer.SIDE.RIGHT);
+            middlePlat.OnNotify(PlatSizer.SIDE.LEFT);
+            lowerPlat.OnNotify(PlatSizer.SIDE.RIGHT);
         }
+        upperStar.OnNotify();
+        lowerStar.OnNotify();
+        upperSpike.OnNotify();
+        lowerSpike.OnNotify();
+        key.OnNotifty();
+    }
+
+    public void OpenRoof(){
+        roof.DoOpen(isLefty);
     }
 }

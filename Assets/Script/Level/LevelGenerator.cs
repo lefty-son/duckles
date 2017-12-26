@@ -36,7 +36,7 @@ public class LevelGenerator : MonoBehaviour {
 
 
     // Use this for initialization
-    void Awake()
+    public void Awake()
     {
         if (instance == null) instance = this;
 		levelPoolEven = new List<GameObject>();
@@ -61,6 +61,15 @@ public class LevelGenerator : MonoBehaviour {
         CheckLevel();
     }
 
+    public void OnRestart(){
+        colliderChecker = false;
+        height = 0;
+        levelNumber = 0;
+        _depth = DEPTH.A;
+        MoveToVoidAndGetScripts();
+        CheckLevel();
+    }
+
     private void MakePool()
     {
         for (int i = 0; i < sectors.Length; i++)
@@ -68,8 +77,6 @@ public class LevelGenerator : MonoBehaviour {
             for (int j = 0; j < EACH_POOL_SIZE; j++){
                 var oddGo = Instantiate(sectors[i]);
                 var evenGo = Instantiate(sectors[i]);
-                //levelPoolOdd.Add(Instantiate(sectors[i]));
-                //levelPoolEven.Add(Instantiate(sectors[i]));
                 levelPoolOdd.Add(oddGo);
                 levelPoolEven.Add(evenGo);
 
@@ -123,7 +130,7 @@ public class LevelGenerator : MonoBehaviour {
             }
 
             _level.transform.position = new Vector3(0, height, 0);
-            height = height + 10;
+            height = height + 20;
         }
         colliderChecker = false;
     }

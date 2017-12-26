@@ -6,6 +6,6 @@ public class RedRectGizmo : MonoBehaviour {
     private void OnDrawGizmos()
     {
         Gizmos.color = new Color(1f, 0f, 0f, 0.25f);
-        Gizmos.DrawCube(transform.position + Vector3.up * 5, Vector3.one * 10);
+        Gizmos.DrawCube(transform.position + Vector3.up * 10, Vector3.one * 20);
     }
 }
