@@ -6,8 +6,11 @@ public class GameManager : MonoBehaviour {
 
     public static GameManager instance;
 
+<<<<<<< HEAD
     public bool isStart;
 
+=======
+>>>>>>> 9cd2db4679c1f0701eaf11268efdce583d9b5906
     [SerializeField]
     private int bounce;
     public int Bounce {
@@ -25,7 +28,10 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
         if (instance == null) instance = this;
+<<<<<<< HEAD
         isStart = false;
+=======
+>>>>>>> 9cd2db4679c1f0701eaf11268efdce583d9b5906
         LoseBounces();
 	}
 
@@ -36,10 +42,13 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+<<<<<<< HEAD
     public void OnRestart(){
         LevelGenerator.instance.OnRestart();
         TouchEvent.instance.OnRestart();
         WaterMovement.instance.OnRestart();
     }
 
+=======
+>>>>>>> 9cd2db4679c1f0701eaf11268efdce583d9b5906
 }

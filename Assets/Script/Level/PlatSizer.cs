@@ -80,7 +80,10 @@ public class PlatSizer : MonoBehaviour
         if(collision.collider.CompareTag("Player")){
             collision.collider.transform.SetParent(transform);
             GameManager.instance.LoseBounces();
+<<<<<<< HEAD
             WaterMovement.instance.DoWaterUp(transform.position);
+=======
+>>>>>>> 9cd2db4679c1f0701eaf11268efdce583d9b5906
         }
     }
 

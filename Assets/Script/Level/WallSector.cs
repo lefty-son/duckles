@@ -5,7 +5,10 @@ using UnityEngine;
 public class WallSector : MonoBehaviour {
     public PlatSizer upperPlat, middlePlat, lowerPlat;
     public Star upperStar, lowerStar;
+<<<<<<< HEAD
     public SpikeCollider upperSpike, lowerSpike;
+=======
+>>>>>>> 9cd2db4679c1f0701eaf11268efdce583d9b5906
     public void OnNotify()
     {
         var r = Random.Range(0, 2);
@@ -23,7 +26,10 @@ public class WallSector : MonoBehaviour {
         }
         upperStar.OnNotify();
         lowerStar.OnNotify();
+<<<<<<< HEAD
         upperSpike.OnNotify();
         lowerSpike.OnNotify();
+=======
+>>>>>>> 9cd2db4679c1f0701eaf11268efdce583d9b5906
     }
 }

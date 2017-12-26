@@ -8,7 +8,10 @@ public class UIManager : MonoBehaviour {
     public static UIManager instance;
 
     public Text t_Bounce;
+<<<<<<< HEAD
     public GameObject p_GameOver;
+=======
+>>>>>>> 9cd2db4679c1f0701eaf11268efdce583d9b5906
 
     private void Awake()
     {
@@ -19,6 +22,7 @@ public class UIManager : MonoBehaviour {
         t_Bounce.text = GameManager.instance.Bounce.ToString();
     }
 
+<<<<<<< HEAD
     public void OnGameOver(){
         p_GameOver.SetActive(true);
         WaterMovement.instance.OnGameOver();
@@ -30,5 +34,7 @@ public class UIManager : MonoBehaviour {
         GameManager.instance.OnRestart();
     }
 
+=======
+>>>>>>> 9cd2db4679c1f0701eaf11268efdce583d9b5906
 
 }
