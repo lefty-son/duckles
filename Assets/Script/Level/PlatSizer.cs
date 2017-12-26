@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlatSizer : MonoBehaviour
 {
+	private readonly float MinSize = 1f;
+    private readonly float MaxSize = 4f;
     private float speed;
 
     public enum SIDE
@@ -20,7 +22,7 @@ public class PlatSizer : MonoBehaviour
     private void Resize(SIDE side)
     {
         var position = transform.localPosition;
-        var size = Random.Range(1f, 5f);
+        var size = Random.Range(MinSize, MaxSize);
         var halfSize = size / 2f;
         transform.localScale = new Vector3(size, 0.2f, 1f);
         if (side == SIDE.LEFT)
@@ -77,6 +79,7 @@ public class PlatSizer : MonoBehaviour
     {
         if(collision.collider.CompareTag("Player")){
             collision.collider.transform.SetParent(transform);
+            GameManager.instance.LoseBounces();
         }
     }
 

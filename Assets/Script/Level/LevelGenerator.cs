@@ -68,8 +68,6 @@ public class LevelGenerator : MonoBehaviour {
             for (int j = 0; j < EACH_POOL_SIZE; j++){
                 var oddGo = Instantiate(sectors[i]);
                 var evenGo = Instantiate(sectors[i]);
-                //levelPoolOdd.Add(Instantiate(sectors[i]));
-                //levelPoolEven.Add(Instantiate(sectors[i]));
                 levelPoolOdd.Add(oddGo);
                 levelPoolEven.Add(evenGo);
 
